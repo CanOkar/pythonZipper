@@ -1,10 +1,10 @@
-import datetime
+from datetime import date
 from zipfile import ZipFile
 import glob
 
 #zipFileName gonna be name of file that refers current time
-zipFileName = datetime.datetime.now()
-zipFileName = str(zipFileName)
+zipFileName = date.today()
+zipFileName = zipFileName.strftime("%b-%d-%Y")
 zipObject = ZipFile(zipFileName , 'w')
 
 files = glob.glob('*.FDB')
