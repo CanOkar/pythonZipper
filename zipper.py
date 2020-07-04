@@ -4,7 +4,7 @@ import glob
 
 #zipFileName gonna be name of file that refers current time
 zipFileName = date.today()
-zipFileName = zipFileName.strftime("%b-%d-%Y")
+zipFileName = zipFileName.strftime("%d-%m-%Y")
 zipObject = ZipFile(zipFileName , 'w')
 
 files = glob.glob('*.FDB')
