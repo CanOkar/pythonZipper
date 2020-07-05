@@ -9,7 +9,7 @@ zipFileName = zipFileName.strftime("%d-%m-%Y")
 
 zipObject = ZipFile(zipFileName, compression=ZIP_LZMA, mode='w')
 
-files = glob.glob('*.exe')
+files = glob.glob('*.FDB')
 logFile = open("log.txt", "a")
 logFile.write("Compression process has started on " + str(datetime.datetime.now()) + "\n")
 logFile.close()
